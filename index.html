@@ -52,8 +52,7 @@ function hslToRgb(h, s, l){
   return [Math.round(r * 255), Math.round(g * 255), Math.round(b * 255)];
 }
 function draw_circle(ctx, x, y, radius, hue, lightness) {
-  ctx.beginPath();
-  ctx.arc(x, y, radius, 0, 2 * Math.PI, false);
+  ctx.fillRect(x, y, 1, 1);
   var rgb = hslToRgb(hue, 0.75, lightness);
   ctx.fillStyle = 'rgba(' +
     rgb[0] + ',' + rgb[1] + ',' + rgb[2] + ',' + 0.5 +
