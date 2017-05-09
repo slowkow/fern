@@ -92,8 +92,9 @@ function fern_step(obj) {
     }
   }
 }
-function step(time) {
-  if (time > 2e4) {
+var t = 0;
+function step() {
+  if (t++ > 1e3) {
     return;
   }
   // Draw 20,000 points each iteration.
