@@ -86,7 +86,7 @@ function fern_step(obj) {
       return Object.assign(obj, {
         x: b.a * obj.x + b.b * obj.y + b.e,
         y: b.c * obj.x + b.d * obj.y + b.f,
-        hue: p < 1e-3 ? (obj.hue > 1 ? 1e-4 : obj.hue + 2e-4) : obj.hue
+        hue: p < 1e-3 ? (obj.hue > 1 ? 1e-4 : obj.hue + 3e-4) : obj.hue
         // hue: 0.4
       });
     }
@@ -98,7 +98,7 @@ function step() {
     return;
   }
   // Draw 20,000 points each iteration.
-  for (var k = 0; k < 1.5e3; k++) {
+  for (var k = 0; k < 1.5e4; k++) {
     draw_circle(
       ctx,
       dot.x * 105 + canvas.height / 2,
